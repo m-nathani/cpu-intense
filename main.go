@@ -6,12 +6,6 @@ import (
 	"strconv"
 )
 
-func printMe(msg string) {
-	for i := 0; i < 100; i++ {
-		fmt.Println(i, ":", msg)
-	}
-}
-
 func fib(number int) int {
 	if number == 0 {
 		return 0
@@ -19,7 +13,6 @@ func fib(number int) int {
 		return 1
 	} else {
 		res := fib(number-1) + fib(number-2)
-		//fmt.Print(res, " ")
 		res = res + 1
 		return res
 	}
