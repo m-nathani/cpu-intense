@@ -13,8 +13,14 @@ func fib(number int) int {
 		return 1
 	} else {
 		res := fib(number-1) + fib(number-2)
-		res = res + 1
+		res = res + 1 - 1
 		return res
+	}
+}
+
+func fibloop(flength int) {
+	for {
+		fib(flength)
 	}
 }
 
@@ -34,7 +40,7 @@ func main() {
 	fmt.Printf("Number of goroutines: %d\n", ngoroutines)
 
 	for i := 0; i < ngoroutines; i++ {
-		go fib(flength)
+		go fibloop(flength)
 	}
 
 	fmt.Scanln()
