@@ -43,6 +43,6 @@ func main() {
 		go fibloop(flength)
 	}
 
-	fmt.Scanln()
+	fibloop(flength)
 	fmt.Println("done")
 }
